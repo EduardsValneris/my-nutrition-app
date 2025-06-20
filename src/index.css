@@ -52,3 +52,19 @@ align-items: center;
 .deleteButton{
  color: rgb(196, 46, 0);
 }
+
+.list-container{
+  position: fixed;
+  top: 10%;
+  right:  5%;
+
+  width: 46%;
+  height: 75%;
+}
+
+.list-container ul{ 
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+}
+

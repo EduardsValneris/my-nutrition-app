@@ -1,20 +1,54 @@
 .button-container{
 position: fixed;
-bottom: 20px;
-left: 20px;
+bottom: 7%;
+left: 10%;
 
-gap: 20px;
+width: 36%;
+height: 15%;
+
+display: flex;
+gap: 10px;                  
+align-items: center;
+} 
+
+.edit-delete-container{
+  height: 90%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  
+}
+
+.button-container button{
+  height: 90%;
+  border-radius: 7px; 
+  background-color: rgb(97, 81, 235);
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 1px 5px 5px rgb(87, 70, 243);
+  &:hover{
+    background-color: rgb(38, 22, 182);
+    box-shadow: 1px 5px 5px rgb(86, 80, 138);
+  }
+}
+
+.edit-delete-container button{
+  font-weight : 700;
 }
 
 .addButton{
-color: rgb(196, 0, 33);
+  color: rgb(7, 196, 0);
+  width: 70%;
+  font-weight : 800;
 
-}
+  }
+
 
 .editButton{
-background-color: aqua;
+  color: rgb(196, 167, 0);
 }
 
 .deleteButton{
-border: white;
+ color: rgb(196, 46, 0);
 }

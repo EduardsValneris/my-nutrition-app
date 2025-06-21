@@ -60,11 +60,14 @@ align-items: center;
 
   width: 46%;
   height: 75%;
+  outline-style: solid;
+
 }
 
 .list-container ul{ 
   display: flex;
   flex-direction: column;
   gap: 15px; 
+
 }
 

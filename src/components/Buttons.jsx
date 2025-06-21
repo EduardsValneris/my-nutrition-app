@@ -1,4 +1,8 @@
 function Buttons() {
+  function add() {
+    alert("Add button clicked!");
+  }
+
   const clickButton = (ButtonName) => {
     alert("Button " + ButtonName + " clicked!");
   };
@@ -22,4 +26,5 @@ function Buttons() {
     </div>
   );
 }
+
 export default Buttons;

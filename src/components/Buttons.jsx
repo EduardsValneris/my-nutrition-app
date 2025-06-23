@@ -1,6 +1,9 @@
+import { addFood } from "./Food";
+
 function Buttons() {
   function add() {
     alert("Add button clicked!");
+    Foods;
   }
 
   const clickButton = (ButtonName) => {
@@ -9,7 +12,7 @@ function Buttons() {
 
   return (
     <div className="button-container">
-      <button onClick={() => clickButton("Add")} className="addButton">
+      <button onClick={() => addFood()} className="addButton">
         {" "}
         Add{" "}
       </button>

@@ -1,14 +1,8 @@
 import React from "react";
 import Buttons from "./Buttons";
-import Food from "./Food";
+import Food, { foods } from "./Food";
 
 function List() {
-  const foods = [
-    new Food("Beans", 100, 500, 8, 10, 0.2, 6),
-    new Food("Rice", 130, 76, 2.7, 28, 0.3, 0.4),
-    new Food("Chicken", 165, 124, 31, 0, 3.6, 0),
-  ];
-
   return (
     <div className="list-container">
       <h1>Macros</h1>

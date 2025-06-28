@@ -1,18 +1,16 @@
-import { addFood } from "./Food";
+import React from "react";
 
-function Buttons() {
-  function add() {
-    alert("Add button clicked!");
-    Foods;
-  }
-
+function Buttons({ addProp }) {
   const clickButton = (ButtonName) => {
     alert("Button " + ButtonName + " clicked!");
   };
 
   return (
     <div className="button-container">
-      <button onClick={() => addFood()} className="addButton">
+      <button
+        onClick={() => addProp("Apple", 100, 200, 3, 10, 0.2, 7)}
+        className="addButton"
+      >
         {" "}
         Add{" "}
       </button>

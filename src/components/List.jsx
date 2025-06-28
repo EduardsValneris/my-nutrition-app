@@ -1,8 +1,6 @@
 import React from "react";
-import Buttons from "./Buttons";
-import Food, { foods } from "./Food";
 
-function List() {
+function List({ foodsProp }) {
   return (
     <div className="list-container">
       <h1>Macros</h1>
@@ -13,15 +11,15 @@ function List() {
           <th>carbs</th> <th>fat</th> <th>fiber</th>
         </thead>
 
-        {foods.map((Food) => (
-          <tr>
-            <td>{Food.name}</td>
-            <td>{Food.kcal}</td>
-            <td>{Food.grams}</td>
-            <td>{Food.protein}</td>
-            <td>{Food.carbs}</td>
-            <td>{Food.fat}</td>
-            <td>{Food.fiber}</td>
+        {foodsProp.map((foods, index) => (
+          <tr key={index}>
+            <td>{foods.name}</td>
+            <td>{foods.kcal}</td>
+            <td>{foods.grams}</td>
+            <td>{foods.protein}</td>
+            <td>{foods.carbs}</td>
+            <td>{foods.fat}</td>
+            <td>{foods.fiber}</td>
           </tr>
         ))}
       </table>

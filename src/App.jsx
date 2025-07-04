@@ -2,11 +2,21 @@ import React, { useState } from "react";
 import Buttons from "./components/Buttons.jsx";
 import Food from "./components/Food.jsx";
 import List from "./components/List.jsx";
+import Input from "./components/input.jsx";
 
 function App() {
   const addFood = (name, grams, kcal, protein, carbs, fat, fiber) => {
     const newFood = new Food(name, grams, kcal, protein, carbs, fat, fiber);
     setFood([...FoodArray, newFood]);
+    setToggle(!toggle);
+  };
+
+  const [toggle, setToggle] = useState(false);
+
+  const delFood = () => {
+    FoodArray.pop();
+    setFood([...FoodArray]);
+    setToggle(!toggle);
   };
 
   const [FoodArray, setFood] = useState([
@@ -17,7 +27,9 @@ function App() {
 
   return (
     <div>
-      <Buttons addProp={addFood} /> <List foodsProp={FoodArray} />
+      <Buttons addProp={addFood} delProp={delFood} />{" "}
+      <List foodsProp={FoodArray} />
+      <Input toggleProp={toggle} setToggle={setToggle} />
     </div>
   );
 }

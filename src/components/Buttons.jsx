@@ -1,6 +1,6 @@
 import React from "react";
 
-function Buttons({ addProp }) {
+function Buttons({ addProp, delProp }) {
   const clickButton = (ButtonName) => {
     alert("Button " + ButtonName + " clicked!");
   };
@@ -19,7 +19,7 @@ function Buttons({ addProp }) {
           {" "}
           Edit{" "}
         </button>
-        <button onClick={() => clickButton("Delete")} className="deleteButton">
+        <button onClick={() => delProp()} className="deleteButton">
           {" "}
           Delete{" "}
         </button>
